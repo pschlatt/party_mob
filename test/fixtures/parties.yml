@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  par_time: 2015-09-09 03:24:39
+  posted: 2015-09-09 03:24:39
+  location: MyString
+  maincontact: MyString
+  secondarycontact: MyString
+  par_name: MyString
+
+two:
+  location: MyString
+  par_time: 2015-09-09 03:24:39
+  posted: 2015-09-09 03:24:39
+  location: MyString
+  maincontact: MyString
+  secondarycontact: MyString
+  par_name: MyString
