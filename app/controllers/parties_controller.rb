@@ -1,5 +1,5 @@
 class PartiesController < ApplicationController
-  before_action :set_party, only: [:show, :edit, :update, :destroy]
+  before_action :set_party, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /parties
   # GET /parties.json
