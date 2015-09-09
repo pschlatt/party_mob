@@ -1,0 +1,45 @@
+<%= form_for(@party) do |f| %>
+  <% if @party.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@party.errors.count, "error") %> prohibited this party from being saved:</h2>
+
+      <ul>
+      <% @party.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :par_time %><br>
+    <%= f.datetime_select :par_time %>
+  </div>
+  <div class="field">
+    <%= f.label :posted %><br>
+    <%= f.datetime_select :posted %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :maincontact %><br>
+    <%= f.text_field :maincontact %>
+  </div>
+  <div class="field">
+    <%= f.label :secondarycontact %><br>
+    <%= f.text_field :secondarycontact %>
+  </div>
+  <div class="field">
+    <%= f.label :par_name %><br>
+    <%= f.text_field :par_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
