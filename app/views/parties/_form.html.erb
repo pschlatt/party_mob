@@ -1,45 +1,52 @@
-<%= form_for(@party) do |f| %>
-  <% if @party.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@party.errors.count, "error") %> prohibited this party from being saved:</h2>
-
-      <ul>
-      <% @party.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @party, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :location, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :location, :class => 'text-field form-control' %>
     </div>
-  <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :par_time, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :par_time, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :posted, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :posted, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :location, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :maincontact, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :maincontact, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :secondarycontact, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :secondarycontact, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :par_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :par_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :par_time %><br>
-    <%= f.datetime_select :par_time %>
-  </div>
-  <div class="field">
-    <%= f.label :posted %><br>
-    <%= f.datetime_select :posted %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :maincontact %><br>
-    <%= f.text_field :maincontact %>
-  </div>
-  <div class="field">
-    <%= f.label :secondarycontact %><br>
-    <%= f.text_field :secondarycontact %>
-  </div>
-  <div class="field">
-    <%= f.label :par_name %><br>
-    <%= f.text_field :par_name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  parties_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
