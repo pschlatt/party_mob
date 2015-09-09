@@ -26,4 +26,5 @@ class User < ActiveRecord::Base
   end
 
 
+  acts_as_votable 
 end
